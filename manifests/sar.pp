@@ -1,0 +1,6 @@
+class hardening::sar {
+
+
+}
+
+
