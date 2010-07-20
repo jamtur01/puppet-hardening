@@ -6,12 +6,12 @@ Red Hat Enterprise Linux 5 (RHEL5) CIS Benchmark Version 1.1 (April 2008).  This
 
 It should be very easy to use the provided control examples and add the additional controls contained in the Benchmark.
 
+License: GPLv3
+
 IMPORTANT NOTE
 --------------
 
 USING THESE CONTROLS DOES NOT MAKE YOUR HOST 100% SECURE.  IT COULD ALSO RESTRICT FUNCTION ON YOUR HOST. PLEASE TEST ALL CONTROLS BEFORE USING IN PRODUCTION.
-
-License: GPLv3
 
 Requirements
 ------------

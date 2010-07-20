@@ -1,7 +1,8 @@
 class hardening::usb {
 
-DEF_KERN=$( grubby --default-kernel)
-grubby --update-kernel=$DEF_KERN --args="nousb"
+  exec { 'grubby --update-kernel=`grubby --default-kernel` --args="nousb"':
+
+  }
 
 }
 

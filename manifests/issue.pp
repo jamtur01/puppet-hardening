@@ -1,12 +1,12 @@
 class hardening::issue {
 
-file template /etc/issue
-
-/bin/cp -pf /etc/issue /etc/issue.net
-/bin/cp -pf /etc/issue /etc/motd
-4. Protect banner:
-chown root:root /etc/issue /etc/issue.net /etc/motd
-chmod 0644 /etc/issue /etc/issue.net /etc/motd
+  file { [ '/etc/issue', '/etc/issue.net', '/etc/motd' ]:
+    content => template('hardening/issue.erb'),
+    owner => 'root',
+    group => 'root',
+    mode => '0644',
+    ensure => present,
+  }
 
 }
 

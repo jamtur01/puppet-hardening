@@ -1,0 +1,15 @@
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+Port <%= sshport %>
+Protocol 2
+SyslogFacility AUTHPRIV
+PermitRootLogin no
+ChallengeResponseAuthentication no
+UsePAM yes
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES 
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT 
+AcceptEnv LC_IDENTIFICATION LC_ALL
+Banner /etc/issue
+# override default of no subsystems
+#Subsystem	sftp	/usr/libexec/openssh/sftp-server

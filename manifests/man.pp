@@ -1,9 +1,8 @@
 class hardening::man {
 
-
-chmod -R go-w /usr/share/doc /usr/local/share/doc
-chmod -R go-w /usr/share/man /usr/local/share/man
+  file { [ '/usr/share/doc', '/usr/local/share/doc', '/usr/local/share/man', '/usr/share/man' ]:
+    mode => 0755,
+    recurse => true,
+  }
 
 }
-
-
