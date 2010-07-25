@@ -1,5 +1,11 @@
 class hardening::sysctl {
 
+  file { '/etc/sysctl.conf':
+    group => 'root',
+    owner => 'root',
+    mode => 0600,
+  }
+
 net.ipv4.conf.default.secure_redirects = 0
 net.ipv4.conf.all.secure_redirects = 0
 net.ipv4.icmp_echo_ignore_broadcasts = 1
@@ -11,8 +17,5 @@ net.ipv4.conf.all.rp_filter = 1
 net.ipv4.conf.default.rp_filter = 1
 net.ipv4.conf.all.accept_source_route = 0
 net.ipv4.conf.default.accept_source_route = 0
-
-chown root:root /etc/sysctl.conf
-chmod 0600 /etc/sysctl.conf
 
 }

@@ -1,6 +1,6 @@
 class hardening::ssh {
 
-  file { '/etc/ssh/sshd_config': 
+  file { '/etc/ssh/sshd_config':
     content => template('hardening/sshd_config.rb'),
     owner => 'root',
     group => 'root',

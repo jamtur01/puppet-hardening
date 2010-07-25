@@ -9,4 +9,3 @@ class hardening::issue {
   }
 
 }
-

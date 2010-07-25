@@ -1,6 +1,6 @@
 class hardening::cron {
 
-  file { [ '/etc/crontab', '/var/spool/cron' ]: 
+  file { [ '/etc/crontab', '/var/spool/cron' ]:
     owner => 'root',
     group => 'root',
     mode => 0400,

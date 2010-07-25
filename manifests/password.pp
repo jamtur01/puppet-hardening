@@ -1,10 +1,15 @@
 class hardening::password {
 
-ls -la /etc/group /etc/gshadow /etc/passwd /etc/shadow
-chown root:root /etc/group /etc/gshadow /etc/passwd /etc/shadow
-chmod 0644 /etc/group /etc/passwd
-chmod 0400 /etc/gshadow /etc/shadow
-ls -la /etc/group /etc/gshadow /etc/passwd /etc/shadow
+  file { [ '/etc/group', '/etc/passwd' ]:
+    owner => 'root',
+    group => 'root',
+    mode => 0644,
+  }
+
+  file { [ '/etc/shadow', '/etc/gshadow' ]:
+    owner => 'root',
+    group => 'root',
+    mode => 0400,
+  }
 
 }
-
