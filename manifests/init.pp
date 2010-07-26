@@ -25,7 +25,7 @@ class hardening {
   include hardening::password
 
   # 7.9 Disable USB Devices
-  include hardening::usb
+  #include hardening::usb
 
   # 8.5 Restrict Permissions On crontab Files
   include hardening::cron
