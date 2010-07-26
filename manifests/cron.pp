@@ -6,7 +6,7 @@ class hardening::cron {
     mode => 0400,
   }
 
-  file { '/etc/cron.d', '/etc/cron.daily', '/etc/cron.weekly', '/etc/cron.monthly' ]:
+  file { [ '/etc/cron.d', '/etc/cron.daily', '/etc/cron.weekly', '/etc/cron.monthly' ]:
     owner => 'root',
     group => 'root',
     mode => 0400,
